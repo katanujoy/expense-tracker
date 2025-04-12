@@ -1,0 +1,195 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    color: #2d3748;
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    color: #718096;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .expense-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group:nth-child(3) {
+    grid-column: span 2;
+  }
+  
+  .expense-form input,
+  .expense-form select {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease;
+  }
+  
+  .expense-form input:focus,
+  .expense-form select:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+  }
+  
+  .add-btn {
+    grid-column: span 2;
+    background: #4299e1;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .add-btn:hover {
+    background: #3182ce;
+  }
+  
+  .summary {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .total-amount {
+    color: #2b6cb0;
+    font-weight: 600;
+  }
+  
+  .expense-count {
+    color: #718096;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0 0;
+  }
+  
+  .expense-list-container {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: #a0aec0;
+  }
+  
+  .expense-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border-bottom: 1px solid #edf2f7;
+    transition: all 0.2s ease;
+  }
+  
+  .expense-item:hover {
+    background: #f8fafc;
+  }
+  
+  .expense-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .expense-desc {
+    font-weight: 500;
+  }
+  
+  .expense-category {
+    font-size: 0.75rem;
+    color: #718096;
+    background: #edf2f7;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    align-self: flex-start;
+  }
+  
+  .expense-date {
+    font-size: 0.75rem;
+    color: #a0aec0;
+  }
+  
+  .expense-amount {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .delete-btn {
+    background: none;
+    border: none;
+    color: #e53e3e;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+    transition: all 0.2s ease;
+  }
+  
+  .delete-btn:hover {
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 640px) {
+    .container {
+      margin: 0;
+      border-radius: 0;
+      min-height: 100vh;
+    }
+    
+    .expense-form {
+      grid-template-columns: 1fr;
+    }
+    
+    .form-group:nth-child(3) {
+      grid-column: span 1;
+    }
+    
+    .add-btn {
+      grid-column: span 1;
+    }
+  }
